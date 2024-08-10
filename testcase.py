@@ -153,7 +153,7 @@ class OrderManager:
 # Main class to run the trading bot
 class TradingBot:
     def __init__(self, symbols):
-        self.alpaca_api = AlpacaAPI("PKRNHCONZVDSHM8HML9P", "2vFNJyqJ4AglXtDkmaoTwOp7RlDBJi8ttEa46iMC")
+        self.alpaca_api = AlpacaAPI("api_key", "secret_key") # <---------------------------------- Replace this with your API info
         self.contract_info = ContractInfo(self.alpaca_api)
         self.option_analyzer = OptionAnalyzer(self.alpaca_api, self.contract_info)
         self.order_manager = OrderManager(self.alpaca_api)
