@@ -126,7 +126,7 @@ class TradingBotGUI(QWidget):
 
 class TradingBot:
     def __init__(self, symbols, log_func=None):
-        self.alpaca_api = AlpacaAPI("PKRNHCONZVDSHM8HML9P", "2vFNJyqJ4AglXtDkmaoTwOp7RlDBJi8ttEa46iMC")
+        self.alpaca_api = AlpacaAPI("api_key", "secret_key") # <----------------------- Replace API key and API secret here
         self.contract_info = ContractInfo(self.alpaca_api)
         self.option_analyzer = OptionAnalyzer(self.alpaca_api, self.contract_info)
         self.order_manager = OrderManager(self.alpaca_api)
